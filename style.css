@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+
+
+.carousel-container { 
+    width: 100%; 
+    height: 100vh;
+    overflow: hidden; 
+    position: relative; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+ }
+.carousel { 
+    display: flex; 
+    width: max-content; 
+    animation: scroll 42s linear infinite; 
+    white-space: nowrap; 
+}
+.slide { 
+    flex: 0 0 auto; 
+    width: 1200px; 
+    height: 1800px;
+    padding: 5px; 
+    text-align: center; 
+    position: relative; 
+    display: inline-block;
+ }
+.slide img { 
+    width: 100%; 
+    border-radius: 10px; 
+    display: block; 
+    transition: transform 0.3s ease-in-out;
+}
+
+.slide img:hover{
+    transform: scale(1.02);
+}
+@keyframes scroll {
+     0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
